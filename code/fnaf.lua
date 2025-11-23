@@ -1,7 +1,7 @@
 
 --ported by 0nehara
---screen code
 
+--screen code below
 local Converted = {
 	["_Gameplay"] = Instance.new("Frame");
 	["_Office"] = Instance.new("ImageLabel");
@@ -2377,7 +2377,7 @@ local GameState = {
 }
 
 local playerData = {
-	playerName = "",
+	playerName = "insertplayernamehere",
 	currentNight = 5,
 	customNight = true,
 	money = 0,
@@ -4563,7 +4563,6 @@ end
 function FoxyStunning()
 	foxyStun = true
 	task.wait(math.random(50,1050)*(1/60))
-	print("foxy unstunned")
 	foxyStun = false
 end
 
@@ -5135,7 +5134,6 @@ end)
 local MuteCallButton = Converted["_MuteCallButton"]
 
 MuteCallButton.MouseButton1Click:Connect(function()
-	print("MUTED")
 	Converted["_MuteCallButton"].Visible = false
 	SoundEffects.Night2Call:Stop()
 	SoundEffects.Night5Call:Stop()
@@ -5333,9 +5331,7 @@ local function ItemSelect(button)
 end
 
 keyboard.TextInputted:Connect(function(text, player)
-	print("working")
-	if player == "0nehara" then
-		print("command "..text)
+	if player == playerData.playerName then
 		local convertedText = text:gsub("\n", "")
 		local split = string.split(convertedText, " ")
 		local command = split[1]:lower()
