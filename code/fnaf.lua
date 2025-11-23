@@ -1,5 +1,5 @@
 
-
+--ported by 0nehara
 --screen code
 
 local Converted = {
@@ -2383,8 +2383,8 @@ local playerData = {
 	money = 0,
 	items = {
 		["bonnie"] = true,
-		["chica"] = true,
-		["freddy"] = true,
+		["chica"] = false,
+		["freddy"] = false,
 		["foxy"] = false,
 		["survival"] = false,
 	},
@@ -5379,6 +5379,3 @@ end)
 
 
 coroutine.yield()
-
-
---[Code made by 0nehara]
